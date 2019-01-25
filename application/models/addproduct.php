@@ -25,6 +25,18 @@ class Addproduct extends CI_Model {
 		endif;
 	}
 
+
+	public function home_products()
+	{
+		$id = $this->session->userdata('id');
+		$q = $this->db->where(['user_id'=>$id])->get('product');
+		if($q->num_rows()):
+			return $q->result();
+		else:
+			return 0;
+		endif;
+	}
+
 }
 
 /* End of file addproduct.php */

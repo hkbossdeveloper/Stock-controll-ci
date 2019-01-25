@@ -73,7 +73,7 @@
                echo form_input(["name" => "productquantity","class"=>"form-control","placeholder" => "Enter Product Quantity","value"=>set_value('productquantity')]);
                echo form_error('productquantity');
                echo br(1);
-               echo form_input(["name" => "productretail","class"=>"form-control","placeholder" => "Enter Product Retail","value"=>set_value('productretail')]);
+               echo form_input(["name" => "productretail","class"=>"form-control","placeholder" => "Enter Product Pruchasing","value"=>set_value('productretail')]);
                echo form_error('productretail');
                echo br(1);
                echo form_input(["name" => "productresell","class"=>"form-control","placeholder" => "Enter Product Resell","value"=>set_value('productresell')]);
@@ -105,7 +105,7 @@
           <tr>
             <th scope="col">Product</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Retail</th>
+            <th scope="col">Purchasing</th>
             <th scope="col">Sell</th>
             <th scope="col">Image</th>
             <th scope="col">Action</th>

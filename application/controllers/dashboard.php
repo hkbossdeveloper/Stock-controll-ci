@@ -11,7 +11,9 @@ class Dashboard extends CI_Controller {
 			$this->load->model('retrive_all','ra');
 			$id = $this->session->userdata('id');
 			$data = $this->ra->get_all($id);
-			$this->load->view('User/Dashboard/home',['deatils' => $data]);
+			$this->load->model('Addproduct','ap');
+			$homeproducts = $this->ap->home_products();
+			$this->load->view('User/Dashboard/home',['deatils' => $data,'hp' => $homeproducts]);
 		endif;
 	}
 	public function logout(){

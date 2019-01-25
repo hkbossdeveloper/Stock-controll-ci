@@ -59,7 +59,34 @@
 
 <div class="container-fluid">
  <div class="row">
-     
+  <?php if($hp != 0): ?>
+    <?php foreach($hp as $key): ?>
+    <div class="col col-md-2">
+    <div class="card mb-4">
+  <h4 class="card-header "><?php echo $key->productname ; ?></h4>
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $key->productquantity; ?> Quantity</h5>
+  </div>
+  <img style="max-height: 250px; max-width: 150%; display: block;" src="<?php echo $key->userfile; ?>" alt="Card image">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Purchasing Price : <?php echo $key->productretail; ?></li>
+    <li class="list-group-item">Selling Price : <?php echo $key->productresell; ?></li>
+    <li class="list-group-item">Total Stock Amount : <?php echo $key->productretail * $key->productquantity;  ?></li>
+  </ul>
+  <div class="card-body">
+
+    <a href="#" class="btn btn-primary btn-sm">Create Url</a>
+    <a href="#" class="btn btn-primary btn-sm">Edit Product</a>
+
+  </div>
+  <div class="card-footer text-muted">
+    Location : WearHouse
+  </div>
+</div>
+ </div>
+<?php endforeach; ?>
+<?php endif; ?>
+
  </div>
 </div>  
 
