@@ -29,7 +29,7 @@ class Dashboard extends CI_Controller {
 			$data = $this->ra->get_all($id);
 			$this->load->model('Addshop','as');
 			$shop = $this->as->allshop();
-			$this->load->view('User/Dashboard/shop',['deatils' => $data,'shop_details'=>$shop]);
+			//$this->load->view('User/Dashboard/shop',['deatils' => $data,'shop_details'=>$shop]);
 		endif;
 	}
 

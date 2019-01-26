@@ -45,7 +45,7 @@
 <?php foreach ($deatils as $key):?>
 
 <div class="jumbotron">
-  <h1 class="display-3">Wellcome, <?php echo $key->goodname; ?> </h1>
+  <h1 class="display-3" style='font-size: 6vh'>Wellcome, <?php echo $key->goodname; ?> </h1>
   <p class="lead">
   <?php echo anchor('Dashboard/shop', 'Shops', 'class="btn btn-outline-primary"'); ?>
   <?php echo anchor('Dashboard/product', 'Products', 'class="btn btn-outline-primary"'); ?>
@@ -61,13 +61,13 @@
  <div class="row">
   <?php if($hp != 0): ?>
     <?php foreach($hp as $key): ?>
-    <div class="col col-md-2">
+    <div class="col col-sm-4 col-md-2 ">
     <div class="card mb-4">
-  <h4 class="card-header "><?php echo $key->productname ; ?></h4>
+  <h4 class="card-header " ><?php echo $key->productname ; ?></h4>
   <div class="card-body">
     <h5 class="card-title"><?php echo $key->productquantity; ?> Quantity</h5>
   </div>
-  <img style="max-height: 250px; max-width: 150%; display: block;" src="<?php echo $key->userfile; ?>" alt="Card image">
+  <img style="max-height: 250px; max-width: 150%; display: block;" class="img-responsive" src="<?php echo $key->userfile; ?>" alt="Card image">
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Purchasing Price : <?php echo $key->productretail; ?></li>
     <li class="list-group-item">Selling Price : <?php echo $key->productresell; ?></li>
@@ -80,7 +80,7 @@
 
   </div>
   <div class="card-footer text-muted">
-    Location : WearHouse
+    Location : <?php echo $key->shopname ?>
   </div>
 </div>
  </div>
